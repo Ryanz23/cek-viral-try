@@ -37,7 +37,7 @@ function App() {
         </a>
       </div>
       <h1 className='text-gray-900'>Vite + React</h1>
-      <div className="card">
+      <div className="card text-gray-900">
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
