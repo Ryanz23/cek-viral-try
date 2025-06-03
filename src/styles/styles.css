@@ -1,7 +1,8 @@
 @import "tailwindcss";
 @theme{
     --color-gradient-primary: linear-gradient(90deg,rgba(0, 126, 190, 1) 0%, rgba(0, 149, 15, 1) 100%);
-    --color-green-secondary: #00950F;
+    --color-green-main: #00950F;
+    --color-blue-main: #007EBE;
 
     --text-primary: 16px;
 }

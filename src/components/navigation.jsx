@@ -28,7 +28,7 @@ const navigation = () => {
         </ul>
         <ul>
           <li>
-            <Link>LOGIN</Link>
+            <Link to="/regist" className="text-gray-600 hover:text-amber-300 transition-all">REGIST</Link>
           </li>
         </ul>
       </nav>

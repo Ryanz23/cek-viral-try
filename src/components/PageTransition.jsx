@@ -9,8 +9,8 @@ const PageTransition = ({ children }) => {
   useEffect(() => {
     gsap.fromTo(
       ref.current,
-      { opacity: 1, y: 50 },
-      { opacity: 1, y: 0, duration: 0.6, ease: "expo.in" }
+      { opacity: 0, },
+      { opacity: 1, duration: 0.3, ease: "expo.in" }
     );
   }, [location.pathname]);
 

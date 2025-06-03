@@ -4,6 +4,8 @@ import Navigation from "./components/navigation";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import PageTransition from "./components/PageTransition";
+import Regist from "./pages/Regist";
+import Result from "./pages/Result";
 
 const App = () => {
   return (
@@ -14,6 +16,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/regist" element={<Regist/>}/>
+            <Route path="/result" element={<Result/>}/>
           </Routes>
         </PageTransition>
       </div>
