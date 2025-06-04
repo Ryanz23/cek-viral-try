@@ -1,17 +1,17 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
-import Navbar from './components/navbar';
-import Form from './components/form';
-import Result from './components/result';
-import './output.css';
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import Navbar from "./components/navbar";
+import Form from "./components/form";
+import Result from "./components/result";
+import "./output.css";
 
 function App() {
   const [urlResult, setUrlResult] = useState("");
 
   const handleFormSubmit = (url) => {
-      setUrlResult(url);
+    setUrlResult(url);
   };
 
   return (
@@ -27,7 +27,7 @@ function App() {
           <Result value={urlResult} />
         </div>
       </div>
-      
+
       <div className="App flex justify-center pt-16">
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -36,8 +36,8 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1 className='text-gray-900'>Vite + React</h1>
-      <div className="card">
+      <h1 className="text-gray-900">Vite + React</h1>
+      <div className="card text-gray-900">
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
