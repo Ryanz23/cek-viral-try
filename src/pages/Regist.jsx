@@ -24,14 +24,21 @@ const Regist = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center min-h-screen bg-gray-50 px-4">
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-8 rounded shadow-md w-full max-w-sm"
+        className="bg-white p-8 rounded-3xl shadow-lg w-full max-w-md
+               ring-1 ring-gray-200"
       >
-        <h2 className="text-2xl font-bold mb-6 text-center">Register</h2>
-        <div className="mb-4">
-          <label className="block mb-1 font-medium" htmlFor="username">
+        <h2 className="text-3xl font-semibold mb-6 text-center text-gray-800">
+          Register
+        </h2>
+
+        <div className="mb-6">
+          <label
+            htmlFor="username"
+            className="block mb-2 text-sm font-medium text-gray-700"
+          >
             Username
           </label>
           <input
@@ -40,12 +47,20 @@ const Regist = () => {
             id="username"
             value={form.username}
             onChange={handleChange}
-            className="w-full border px-3 py-2 rounded"
+            className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm
+                      text-gray-900 placeholder-gray-400 focus:outline-none
+                      focus:ring-2 focus:ring-blue-400 focus:border-transparent
+                      transition"
+            placeholder="Masukkan username"
             required
           />
         </div>
-        <div className="mb-4">
-          <label className="block mb-1 font-medium" htmlFor="account">
+
+        <div className="mb-6">
+          <label
+            htmlFor="account"
+            className="block mb-2 text-sm font-medium text-gray-700"
+          >
             Account
           </label>
           <input
@@ -54,12 +69,20 @@ const Regist = () => {
             id="account"
             value={form.account}
             onChange={handleChange}
-            className="w-full border px-3 py-2 rounded"
+            className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm
+                      text-gray-900 placeholder-gray-400 focus:outline-none
+                      focus:ring-2 focus:ring-blue-400 focus:border-transparent
+                      transition"
+            placeholder="Masukkan akun"
             required
           />
         </div>
+
         <div className="mb-6">
-          <label className="block mb-1 font-medium" htmlFor="password">
+          <label
+            htmlFor="password"
+            className="block mb-2 text-sm font-medium text-gray-700"
+          >
             Password
           </label>
           <input
@@ -68,20 +91,25 @@ const Regist = () => {
             id="password"
             value={form.password}
             onChange={handleChange}
-            className="w-full border px-3 py-2 rounded"
+            className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm
+                      text-gray-900 placeholder-gray-400 focus:outline-none
+                      focus:ring-2 focus:ring-blue-400 focus:border-transparent
+                      transition"
+            placeholder="Masukkan password"
             required
           />
         </div>
+
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
+          className="w-full bg-blue-500 text-white font-medium py-3 rounded-lg hover:bg-blue-600 transition-all duration-300 shadow-md hover:shadow-lg"
         >
           Register
         </button>
-        <p className=" text-center mt-3">
-          Already have account?{" "}
-          <Link to="/login" className="text-green-secondary">
-            Login here
+        <p className="mt-4 text-sm text-center text-gray-600">
+          Sudah punya akun?{" "}
+          <Link to="/login" className="text-blue-500 hover:underline">
+            Masuk
           </Link>
         </p>
       </form>
