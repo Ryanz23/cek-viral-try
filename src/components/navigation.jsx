@@ -6,7 +6,7 @@ const navigation = () => {
     <header className="bg-white p-6 shadow-sm fixed top-0 h-18 w-full z-50">
       <nav className="flex items-center justify-between w-7xl mx-auto ">
         <div>
-          <img src={image} alt="logo" className="" />
+          <img src={image} alt="logo" className="w-32" />
         </div>
         <ul className="flex gap-3 text-sm">
           <li>
