@@ -8,7 +8,7 @@ const navigation = () => {
         <div>
           <img src={image} alt="logo" className="w-32" />
         </div>
-        <ul className="flex gap-3 text-sm">
+        <ul className="flex gap-6 text-sm">
           <li>
             <Link
               to="/"
@@ -34,7 +34,7 @@ const navigation = () => {
             </Link>
           </li>
         </ul>
-        <ul className="flex gap-3">
+        <ul className="flex gap-6">
           <li>
             <Link to="/login" className="bg-gradient-to-r from-blue-main to-green-main bg-clip-text text-transparent text-sm hover:text-blue-500 transition-all">MASUK</Link>
           </li>
