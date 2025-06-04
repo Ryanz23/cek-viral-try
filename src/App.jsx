@@ -8,6 +8,7 @@ import PageTransition from "./components/PageTransition";
 import Regist from "./pages/Regist";
 import Result from "./pages/Result";
 import { Toaster } from "react-hot-toast";
+import Login from "./pages/Login";
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
             <Route path="/how-it-works" element={<Works />} />
             <Route path="/about" element={<About />} />
             <Route path="/regist" element={<Regist/>}/>
+            <Route path="/login" element={<Login/>}/>
             <Route path="/result" element={<Result/>}/>
           </Routes>
         </PageTransition>
