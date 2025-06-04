@@ -20,12 +20,11 @@ const Home = () => {
     >
       <div className="p-10 max-w-6xl w-full flex flex-col items-center">
         <h1
-          className="text-4xl font-semibold mb-4 text-center
-    bg-gradient-to-r from-blue-main to-green-main bg-clip-text text-transparent"
+          className="text-4xl font-semibold mb-4 text-center bg-gradient-to-r from-blue-main to-green-main bg-clip-text text-transparent"
         >
           CEK FAKTA DALAM SEKEJAP!
         </h1>
-        <p className="text-gray-700 mb-8 text-center">
+        <p className="text-gray-700 text-md mb-8 text-center">
           Masukkan berita, rumor, atau informasi yang kamu temukan,
           <br />
           dan biarkan kami bantu cek apakah itu fakta atau hoaks.
@@ -36,7 +35,7 @@ const Home = () => {
         >
           <input
             type="text"
-            value={value}
+            value={value}amber-300
             onChange={handleInput}
             placeholder="Maukkan teks disini..."
             className="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
