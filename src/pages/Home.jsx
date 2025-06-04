@@ -1,22 +1,30 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-hot-toast';
 const Home = () => {
   const [value, setValue] = useState("");
   const navigate = useNavigate();
 
   const handleInput = (e) => setValue(e.target.value);
 
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`You entered: ${value}`);
-    navigate("/result", { state: { value } });
-    setValue("");
+    // Loading toast notification
+    toast.success("Silakan tunggu, kami sedang memproses...", {
+      duration: 2000,
+      position: 'top-center',
+    });
+    setTimeout(() => {
+      navigate("/result", { state: { value } });
+      setValue("");
+    }, 2000);
   };
 
   return (
     <section
       id="hero-section"
-      className="w-full h-svh  flex items-center justify-center"
+      className="w-full h-svh flex items-center justify-center"
     >
       <div className="p-10 max-w-6xl w-full flex flex-col items-center">
         <h1
@@ -35,7 +43,7 @@ const Home = () => {
         >
           <input
             type="text"
-            value={value}amber-300
+            value={value}
             onChange={handleInput}
             placeholder="Maukkan teks disini..."
             className="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
