@@ -7,11 +7,22 @@ import About from "./pages/About";
 import PageTransition from "./components/PageTransition";
 import Regist from "./pages/Regist";
 import Result from "./pages/Result";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
     <Router>
       <div>
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          toastOptions={{
+            style: {
+              background: '#333',
+              color: '#fff',
+            },
+          }}
+        />
         <Navigation />
         <PageTransition>
           <Routes>
