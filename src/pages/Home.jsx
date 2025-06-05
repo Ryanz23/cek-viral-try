@@ -1,25 +1,23 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { toast } from 'react-hot-toast';
+import Loading from "../components/Loading";
 const Home = () => {
   const [value, setValue] = useState("");
   const navigate = useNavigate();
+  const { handleLoadingSubmit } = Loading();
 
   const handleInput = (e) => setValue(e.target.value);
 
-  
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Loading toast notification
-    toast.success("Silakan tunggu, kami sedang memproses...", {
-      duration: 2000,
-      position: 'top-center',
-    });
-    setTimeout(() => {
+    
+    // Gunakan loading handler
+    handleLoadingSubmit(() => {
       navigate("/result", { state: { value } });
       setValue("");
-    }, 2000);
+    });
   };
+
 
   return (
     <section
