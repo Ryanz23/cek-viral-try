@@ -76,7 +76,7 @@ const Nav = () => {
               <li key={item.name}>
                 <Link
                   to={item.to}
-                  className="text-gray-700 hover:text-blue-600 transition-all duration-300 relative group py-2"
+                  className="text-gray-700 hover:text-transparent transition-all duration-300 relative group py-2 hover:bg-gradient-to-r hover:from-blue-main hover:to-green-main hover:bg-clip-text before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-main before:to-green-main before:bg-clip-text before:text-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
                 >
                   {item.name}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-main to-green-main group-hover:w-full transition-all duration-300"></span>
@@ -86,13 +86,14 @@ const Nav = () => {
           </ul>
 
           {/* Desktop Auth Links */}
-          <ul className="hidden lg:flex gap-4">
+          <ul className="hidden lg:flex gap-8 text-sm font-medium">
             <li>
               <Link 
                 to="/login" 
-                className="px-4 py-2 text-gray-700 hover:text-blue-600 transition-all duration-300 text-sm font-medium"
+                className="text-gray-700 hover:text-transparent transition-all duration-300 relative group py-2 hover:bg-gradient-to-r hover:from-blue-main hover:to-green-main hover:bg-clip-text before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-main before:to-green-main before:bg-clip-text before:text-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
               >
                 MASUK
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-main to-green-main group-hover:w-full transition-all duration-300"></span>
               </Link>
             </li>
             <li>
