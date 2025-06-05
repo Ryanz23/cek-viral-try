@@ -18,13 +18,12 @@ const Home = () => {
     });
   };
 
-
   return (
     <section
       id="hero-section"
       className="w-full h-svh flex items-center justify-center"
     >
-      <div className="p-10 max-w-6xl w-full flex flex-col items-center">
+      <div className="w-full flex flex-col items-center">
         <h1
           className="text-4xl font-semibold mb-4 text-center bg-gradient-to-r from-blue-main to-green-main bg-clip-text text-transparent"
         >
