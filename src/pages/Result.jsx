@@ -6,7 +6,7 @@ const Result = () => {
   const value = location.state?.value || "value is here";
   return (
     <>
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 px-4">
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
         <div className="bg-white rounded-3xl shadow-xl p-10 max-w-lg w-full text-center">
           <h1 className="text-4xl font-extrabold text-blue-600 mb-6">
             Hasil Kamu!
