@@ -3,11 +3,11 @@ import React from "react";
 const Works = () => {
   
   return (
-    <div className="max-w-7xl lg:h-svh flex flex-col items-center justify-center py-18 lg:py-10 px-4 mx-auto">
+    <div className="max-w-7xl lg:h-svh flex flex-col items-center justify-center py-18 lg:py-auto px-4 m-auto">
       <div className="mx-auto w-full">
         
         {/* Header Section */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-10">
           <h1 className="bg-gradient-to-r from-blue-main to-green-main bg-clip-text text-transparent text-4xl font-bold text-center mb-6">
             CARA KERJA
           </h1>
@@ -54,7 +54,7 @@ const Works = () => {
 
         {/* Why Choose Section */}
         <div>
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-main to-green-main bg-clip-text mb-8 pt-6 text-transparent text-start">KENAPA PILIH CEK VIRAL</h2>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-main to-green-main bg-clip-text mb-8 text-transparent text-start">KENAPA PILIH CEK VIRAL</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
