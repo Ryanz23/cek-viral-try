@@ -54,9 +54,11 @@ const Works = () => {
 
         {/* Why Choose Section */}
         <div>
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-main to-green-main bg-clip-text mb-8 text-transparent text-start">KENAPA PILIH CEK VIRAL</h2>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-main to-green-main bg-clip-text mb-8 text-transparent text-center">
+            KENAPA PILIH CEK VIRAL
+          </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             
             {/* Feature 1 */}
             <div className="bg-white rounded-xl p-6 shadow-lg">
