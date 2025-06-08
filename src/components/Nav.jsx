@@ -71,7 +71,7 @@ const Nav = () => {
           </div>
           
           {/* Desktop Navigation */}
-          <ul className="hidden lg:flex gap-8 text-sm font-medium">
+          <ul className="hidden md:flex gap-6 lg:gap-8 text-sm font-medium">
             {navItems.map((item) => (
               <li key={item.name}>
                 <Link
@@ -86,7 +86,7 @@ const Nav = () => {
           </ul>
 
           {/* Desktop Auth Links */}
-          <ul className="hidden lg:flex gap-8 text-sm font-medium">
+          <ul className="hidden md:flex gap-4 lg:gap-8 text-sm font-medium">
             <li>
               <Link 
                 to="/login" 
@@ -109,7 +109,7 @@ const Nav = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="lg:hidden relative flex flex-col justify-center items-center w-10 h-10 rounded-lg hover:bg-gray-100 transition-all duration-300 z-50"
+            className="md:hidden relative flex flex-col justify-center items-center w-10 h-10 rounded-lg hover:bg-gray-100 transition-all duration-300 z-50"
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
           >
@@ -128,14 +128,14 @@ const Nav = () => {
 
       {/* Mobile Menu Overlay */}
       <div 
-        className={`lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-all duration-300 ${
+        className={`md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-all duration-300 ${
           isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
         onClick={closeMenu}
       />
 
       {/* Mobile Menu */}
-      <div className={`lg:hidden fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl z-40 transform transition-all duration-300 ${
+      <div className={`md:hidden fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl z-40 transform transition-all duration-300 ${
         isMenuOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
         <div className="flex flex-col h-full">
