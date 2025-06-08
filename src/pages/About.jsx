@@ -5,7 +5,7 @@ const About = () => {
     {
       name: "Syahel Rusi Razaba",
       role: "Machine Learning Engineer",
-      image: "public/profile.svg",
+      image: "/profile.svg",
       description: "UIN Syarif Hidayatulloh Jakarta",
       social: {
         github: "#",
@@ -16,7 +16,7 @@ const About = () => {
     {
       name: "Rifaldi Achmad Faisal",
       role: "Machine Learning Engineer",
-      image: "public/profile.svg",
+      image: "/profile.svg",
       description: "UIN Syarif Hidayatulloh Jakarta",
       social: {
         github: "#",
@@ -27,7 +27,7 @@ const About = () => {
     {
       name: "Deawi Guna Pratiwi",
       role: "Machine Learning Engineer",
-      image: "public/profile.svg",
+      image: "/profile.svg",
       description: "Politeknik Baja Tegal",
       social: {
         github: "#",
@@ -38,7 +38,7 @@ const About = () => {
     {
       name: "Ariyan Andryan Aryja",
       role: "Front End Developer",
-      image: "public/profile.svg",
+      image: "/profile.svg",
       description: "Politeknik Baja Tegal",
       social: {
         github: "#",
@@ -49,7 +49,7 @@ const About = () => {
     {
       name: "Zeko Bacharudin Firdaus",
       role: "Full Stack Developer",
-      image: "public/profile.svg",
+      image: "/profile.svg",
       description: "Universitas Ahmad Dahlan Yogyakarta",
       social: {
         github: "#",
@@ -134,7 +134,7 @@ const About = () => {
                 <div className="h-full flex items-center justify-center">
                   <div className="text-center justify-center">
                     <div className="text-6xl mb-6">
-                      <img src="public/protection.svg" alt="protection" className="w-24 mx-auto" />
+                      <img src="/protection.svg" alt="protection" className="w-24 mx-auto" />
                     </div>
                     <h4 className="text-2xl font-bold mb-4">Melindungi dari Misinformasi</h4>
                     <p className="text-white">
