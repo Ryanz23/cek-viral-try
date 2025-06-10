@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import authService from "../data/api/authService";
+import authService from "../data/api/AuthService";
 
 const Regist = () => {
   const [formData, setFormData] = useState({
@@ -82,7 +82,7 @@ const Regist = () => {
 
     try {
       // Remove confirmPassword from the data sent to API
-      const { confirmPassword, ...registrationData } = formData;
+      const { ...registrationData } = formData;
       
       const result = await authService.register(registrationData);
 
