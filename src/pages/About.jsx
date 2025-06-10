@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const teamMembers = [
@@ -258,12 +259,12 @@ const About = () => {
             Mari bersama-sama menciptakan ekosistem informasi yang lebih sehat dan terpercaya
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-main to-green-main text-white rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-              Mulai Verifikasi
-            </button>
-            <button className="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-full font-semibold hover:border-blue-600 hover:text-blue-600 transition-colors duration-300">
+            <Link to="/regist" className="px-8 py-4 bg-gradient-to-r from-blue-main to-green-main text-white rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+              Daftar Sekarang
+            </Link>
+            <Link to="/how-it-works" className="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-full font-semibold hover:border-blue-600 hover:text-blue-600 transition-colors duration-300">
               Pelajari Lebih Lanjut
-            </button>
+            </Link>
           </div>
         </div>
       </section>
