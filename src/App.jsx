@@ -10,6 +10,7 @@ import Result from "./pages/Result";
 import { Toaster } from "react-hot-toast";
 import Login from "./pages/Login";
 import Footer from "./components/Footer";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
             <Route path="/regist" element={<Regist/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/result" element={<Result/>}/>
+            <Route path="/dashboard" element={<Dashboard/>} />
           </Routes>
         </PageTransition>
         <Footer />
