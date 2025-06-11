@@ -14,7 +14,6 @@ class AuthService {
     const url = `${this.baseURL}${endpoint}`;
     
     const config = {
-      headers: this.defaultHeaders,
       ...options,
       headers: {
         ...this.defaultHeaders,
