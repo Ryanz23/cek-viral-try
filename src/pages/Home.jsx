@@ -16,8 +16,11 @@ const Home = () => {
   return (
     <section
       id="hero-section"
-      className="w-full h-svh  flex items-center justify-center"
+      className="w-full h-svh  flex items-center justify-center overflow-hidden"
     >
+      <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-blue-300 opacity-40 rounded-full blur-3xl z-0"></div>
+      <div className="absolute bottom-[-120px] right-[-80px] w-[250px] h-[250px] bg-green-300 opacity-30 rounded-full blur-2xl z-0"></div>
+      <div className="absolute top-1/2 left-1/2 w-[200px] h-[200px] bg-pink-300 opacity-20 rounded-full blur-2xl z-0 -translate-x-1/2 -translate-y-1/2"></div>
       <div className="p-10 max-w-6xl w-full flex flex-col items-center">
         <h1
           className="text-4xl font-semibold mb-4 text-center

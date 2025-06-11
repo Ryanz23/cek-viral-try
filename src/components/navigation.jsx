@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import image from "../assets/react.svg";
 const navigation = () => {
   return (
-    <header className="bg-white p-3 shadow-sm fixed top-0 w-full z-50">
-      <nav className="flex items-center justify-between w-7xl m-auto ">
+    <header className="bg-white p-3 shadow-sm fixed top-0 w-full z-50 flex justify-center">
+      <nav className="flex items-center justify-between w-7xl  ">
         <div>
           <img src={image} alt="logo" />
         </div>
-        <ul className="flex gap-3 ">
+        <ul className="flex gap-3 text-sm">
           <li>
             <Link
               to="/"
@@ -28,7 +28,7 @@ const navigation = () => {
         </ul>
         <ul>
           <li>
-            <Link to="/regist" className="text-gray-600 hover:text-amber-300 transition-all">REGIST</Link>
+            <Link to="/regist" className="text-gray-600 hover:text-amber-300 transition-all text-sm">SIGN IN</Link>
           </li>
         </ul>
       </nav>
