@@ -14,7 +14,6 @@ const Regist = () => {
   const [success, setSuccess] = useState("");
   const navigate = useNavigate();
 
-  // Check if user is already authenticated
   useEffect(() => {
     if (authService.isAuthenticated()) {
       navigate("/dashboard", { replace: true });
@@ -28,7 +27,6 @@ const Regist = () => {
       [name]: value
     }));
     
-    // Clear messages when user starts typing
     if (error) setError("");
     if (success) setSuccess("");
   };

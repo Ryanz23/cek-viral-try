@@ -14,8 +14,6 @@ class AuthService {
     const url = `${this.baseURL}${endpoint}`;
     
     const config = {
-      headers: this.defaultHeaders,
-      ...options,
       headers: {
         ...this.defaultHeaders,
         ...(options.headers || {}),
@@ -201,6 +199,8 @@ class AuthService {
       default: "Terjadi kesalahan yang tidak terduga. Silakan coba lagi.",
     };
   }
+
+
 }
 
 // Create and export a singleton instance

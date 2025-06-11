@@ -11,7 +11,6 @@ const Login = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  // Check if user is already authenticated
   useEffect(() => {
     if (authService.isAuthenticated()) {
       navigate("/dashboard", { replace: true });
@@ -25,14 +24,12 @@ const Login = () => {
       [name]: value
     }));
     
-    // Clear error when user starts typing
     if (error) setError("");
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Basic validation
     if (!formData.account.trim() || !formData.password.trim()) {
       setError("Semua field harus diisi");
       return;
@@ -47,7 +44,6 @@ const Login = () => {
       if (result.success) {
         console.log("Login successful:", result.data);
         
-        // Save authentication data
         if (result.data.token) {
           authService.saveToken(result.data.token);
         }
@@ -56,7 +52,6 @@ const Login = () => {
           authService.saveUser(result.data.user);
         }
 
-        // Navigate to dashboard
         navigate("/dashboard", { replace: true });
       } else {
         // Handle login failure
