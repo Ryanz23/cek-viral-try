@@ -1,34 +1,35 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Loading from "../components/Loading";
 const Home = () => {
   const [value, setValue] = useState("");
   const navigate = useNavigate();
+  const { handleLoadingSubmit } = Loading();
 
   const handleInput = (e) => setValue(e.target.value);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`You entered: ${value}`);
-    navigate("/result", { state: { value } });
-    setValue("");
+    
+    // Gunakan loading handler
+    handleLoadingSubmit(() => {
+      navigate("/result", { state: { value } });
+      setValue("");
+    });
   };
 
   return (
     <section
       id="hero-section"
-      className="w-full h-svh  flex items-center justify-center overflow-hidden"
+      className="w-full h-svh flex items-center justify-center"
     >
-      <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-blue-300 opacity-40 rounded-full blur-3xl z-0"></div>
-      <div className="absolute bottom-[-120px] right-[-80px] w-[250px] h-[250px] bg-green-300 opacity-30 rounded-full blur-2xl z-0"></div>
-      <div className="absolute top-1/2 left-1/2 w-[200px] h-[200px] bg-pink-300 opacity-20 rounded-full blur-2xl z-0 -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="p-10 max-w-6xl w-full flex flex-col items-center">
+      <div className="w-full flex flex-col items-center">
         <h1
-          className="text-4xl font-semibold mb-4 text-center
-    bg-gradient-to-r from-blue-main to-green-main bg-clip-text text-transparent"
+          className="text-4xl font-semibold mb-4 text-center bg-gradient-to-r from-blue-main to-green-main bg-clip-text text-transparent"
         >
           CEK FAKTA DALAM SEKEJAP!
         </h1>
-        <p className="text-gray-700 mb-8 text-center">
+        <p className="text-gray-700 text-md mb-8 text-center">
           Masukkan berita, rumor, atau informasi yang kamu temukan,
           <br />
           dan biarkan kami bantu cek apakah itu fakta atau hoaks.
