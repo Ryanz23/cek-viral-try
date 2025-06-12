@@ -1,6 +1,6 @@
 // src/components/navigation/hooks/useNavigation.js
-import { useState, useEffect } from 'react';
-import { NAV_CONFIG } from '../../constants/navigation';
+import { useState, useEffect } from "react";
+import { NAV_CONFIG } from "../../constants/navigation";
 
 export const useNavigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -9,9 +9,9 @@ export const useNavigation = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > NAV_CONFIG.SCROLL_THRESHOLD);
     };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return { isScrolled };
