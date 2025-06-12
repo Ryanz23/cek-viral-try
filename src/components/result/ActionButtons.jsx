@@ -10,12 +10,6 @@ const ActionButtons = ({ onGoToHome, onGoBack, onRetry, inputValue }) => {
         Cek Teks Lain
       </button>
 
-      <button
-        onClick={() => onRetry(inputValue)}
-        className="px-8 py-3 border-2 border-blue-500 text-blue-500 rounded-xl hover:bg-blue-50 transition-all duration-300 font-semibold"
-      >
-        Coba Lagi
-      </button>
 
       <button
         onClick={onGoBack}

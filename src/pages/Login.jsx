@@ -13,7 +13,7 @@ const Login = () => {
 
   useEffect(() => {
     if (authService.isAuthenticated()) {
-      navigate("/dashboard", { replace: true });
+      navigate("/", { replace: true });
     }
   }, [navigate]);
 
@@ -44,15 +44,12 @@ const Login = () => {
       if (result.success) {
         console.log("Login successful:", result.data);
         
-        if (result.data.token) {
-          authService.saveToken(result.data.token);
+        if (result.data.access_token) {
+          authService.saveToken(result.data.access_token);
         }
         
-        if (result.data.user) {
-          authService.saveUser(result.data.user);
-        }
 
-        navigate("/dashboard", { replace: true });
+        navigate("/", { replace: true });
       } else {
         // Handle login failure
         const errorMessage = authService.getErrorMessage(

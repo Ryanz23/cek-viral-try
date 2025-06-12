@@ -12,7 +12,7 @@ import {
 const Result = () => {
   const { inputValue, apiResult, success, displayInfo, hasData } =
     useResultData();
-  const { goBack, goToHome, retryAnalysis } = useResultActions();
+  const { goBack, goToHome } = useResultActions();
 
   if (!hasData) {
     return <NoDataError onGoToHome={goToHome} />;
@@ -34,7 +34,6 @@ const Result = () => {
         <ActionButtons
           onGoToHome={goToHome}
           onGoBack={goBack}
-          onRetry={retryAnalysis}
           inputValue={inputValue}
         />
 

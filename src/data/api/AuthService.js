@@ -13,11 +13,13 @@ class AuthService {
   async apiCall(endpoint, options = {}) {
     const url = `${this.baseURL}${endpoint}`;
     
-    const config = {
+    const config = {  
+      method: options.method,
       headers: {
         ...this.defaultHeaders,
         ...(options.headers || {}),
       },
+      ...(options.body && { body: options.body }),
     };
 
     try {
@@ -109,6 +111,7 @@ class AuthService {
 
   // Token management
   saveToken(token) {
+    console.log("harusnya kesini",token)
     try {
       localStorage.setItem("authToken", token);
       return true;

@@ -1,8 +1,9 @@
 const API_BASE_URL =
-  "https://cekviral-service-231745028467.asia-southeast2.run.app/";
+  "https://cekviral-service-231745028467.asia-southeast2.run.app";
 
 export const postValidate = async (input) => {
   try {
+    console.log(`${API_BASE_URL}/verify`)
     const response = await fetch(`${API_BASE_URL}/verify`, {
       method: "POST",
       headers: {

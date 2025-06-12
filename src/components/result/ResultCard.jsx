@@ -28,15 +28,15 @@ const ResultCard = ({ displayInfo, apiResult, success }) => {
       {/* Main Result */}
       <div className="mb-6">
         <div className={`text-3xl font-bold ${color} mb-2`}>{finalLabel}</div>
-        <div className="text-sm text-gray-600">
+        {/* <div className="text-sm text-gray-600">
           Prediksi Model:{" "}
           <span className="font-semibold">{predictedLabel}</span>
         </div>
         <div className="text-sm text-gray-600 mt-1">
           Tingkat Keyakinan:{" "}
           <span className="font-semibold">{confidence}%</span>
-        </div>
-      </div>
+        </div> */}
+      </div>  
 
       {/* Probability Breakdown */}
       {probabilities && (
@@ -60,7 +60,7 @@ const ResultCard = ({ displayInfo, apiResult, success }) => {
       )}
 
       {/* Additional Info */}
-      <div className="mt-6 pt-4 border-t border-gray-200">
+      {/* <div className="mt-6 pt-4 border-t border-gray-200">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
           <div>
             <span className="font-medium">Waktu Analisis:</span>{" "}
@@ -76,7 +76,7 @@ const ResultCard = ({ displayInfo, apiResult, success }) => {
             {apiResult.processing_message}
           </div>
         )}
-      </div>
+      </div> */}
 
       {/* Warning for "BELUM DIVERIFIKASI" */}
       {finalLabel === "BELUM DIVERIFIKASI" && (

@@ -81,6 +81,7 @@ const Regist = () => {
     try {
       // Remove confirmPassword from the data sent to API
       const { ...registrationData } = formData;
+      console.log("Registration data:", registrationData);
       
       const result = await authService.register(registrationData);
 
