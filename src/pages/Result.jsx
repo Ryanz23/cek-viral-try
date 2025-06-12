@@ -1,6 +1,6 @@
 import React from "react";
-import { useResultData } from "../hooks/useResultData";
-import { useResultActions } from "../hooks/useResultActions";
+import { useResultData } from "../hooks/result hooks/useResultData";
+import { useResultActions } from "../hooks/result hooks/useResultActions";
 import {
   ResultHeader,
   InputDisplay,

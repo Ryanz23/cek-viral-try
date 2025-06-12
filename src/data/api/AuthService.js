@@ -111,7 +111,6 @@ class AuthService {
 
   // Token management
   saveToken(token) {
-    console.log("harusnya kesini",token)
     try {
       localStorage.setItem("authToken", token);
       return true;
