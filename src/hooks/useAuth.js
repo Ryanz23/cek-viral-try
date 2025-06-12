@@ -1,6 +1,6 @@
 // src/components/navigation/hooks/useAuth.js
-import { useState, useEffect } from 'react';
-import authService from '../data/api/AuthService';
+import { useState, useEffect } from "react";
+import authService from "../data/api/AuthService";
 
 export const useAuth = () => {
   const [user, setUser] = useState(null);
@@ -11,7 +11,7 @@ export const useAuth = () => {
     const checkAuth = () => {
       const authenticated = authService.isAuthenticated();
       const userData = authService.getUser();
-      
+
       setIsAuthenticated(authenticated);
       setUser(userData);
       setLoading(false);
@@ -21,7 +21,7 @@ export const useAuth = () => {
 
     // Listen for storage changes (login/logout in other tabs)
     const handleStorageChange = (e) => {
-      if (e.key === 'authToken' || e.key === 'userData') {
+      if (e.key === "authToken" || e.key === "userData") {
         checkAuth();
       }
     };
@@ -31,12 +31,12 @@ export const useAuth = () => {
       checkAuth();
     };
 
-    window.addEventListener('storage', handleStorageChange);
-    window.addEventListener('authStateChanged', handleAuthChange);
-    
+    window.addEventListener("storage", handleStorageChange);
+    window.addEventListener("authStateChanged", handleAuthChange);
+
     return () => {
-      window.removeEventListener('storage', handleStorageChange);
-      window.removeEventListener('authStateChanged', handleAuthChange);
+      window.removeEventListener("storage", handleStorageChange);
+      window.removeEventListener("authStateChanged", handleAuthChange);
     };
   }, []);
 
@@ -44,19 +44,19 @@ export const useAuth = () => {
     authService.logout();
     setIsAuthenticated(false);
     setUser(null);
-    
+
     // Trigger custom event
-    window.dispatchEvent(new Event('authStateChanged'));
-    
+    window.dispatchEvent(new Event("authStateChanged"));
+
     // Redirect to home
-    window.location.href = '/';
+    window.location.href = "/";
   };
 
   const getDisplayName = () => {
     if (user) {
-      return user.name || user.username || user.account || 'User';
+      return user.name || user.username || user.account || "User";
     }
-    return 'User';
+    return "User";
   };
 
   return {
