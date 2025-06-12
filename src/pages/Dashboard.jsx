@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import authService from "../data/api/authService";
+import authService from "../data/api/AuthService";
 
 const Dashboard = () => {
   const navigate = useNavigate();

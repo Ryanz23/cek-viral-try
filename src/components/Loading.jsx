@@ -9,15 +9,15 @@ const Loading = () => {
     });
   };
 
-  const handleLoadingSubmit = (callback, delay = 2000) => {
-    showLoadingToast();
+  // const handleLoadingSubmit = (callback, delay = 2000) => {
+  //   showLoadingToast();
     
-    setTimeout(() => {
-      callback();
-    }, delay);
-  };
+  //   setTimeout(() => {
+  //     callback();
+  //   }, delay);
+  // };
 
-  return { showLoadingToast, handleLoadingSubmit };
+  return { showLoadingToast, };
 };
 
 export default Loading;

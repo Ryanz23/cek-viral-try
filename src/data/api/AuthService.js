@@ -13,13 +13,13 @@ class AuthService {
   async apiCall(endpoint, options = {}) {
     const url = `${this.baseURL}${endpoint}`;
     
-    const config = {
-      headers: this.defaultHeaders,
-      ...options,
+    const config = {  
+      method: options.method,
       headers: {
         ...this.defaultHeaders,
         ...(options.headers || {}),
       },
+      ...(options.body && { body: options.body }),
     };
 
     try {
@@ -201,6 +201,8 @@ class AuthService {
       default: "Terjadi kesalahan yang tidak terduga. Silakan coba lagi.",
     };
   }
+
+
 }
 
 // Create and export a singleton instance

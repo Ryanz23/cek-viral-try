@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Navigation from "./components/Nav";
+import Navigation from "./components/navigation"; // Now imports the modular Nav
 import Home from "./pages/Home";
 import Works from "./pages/Works";
 import About from "./pages/About";
@@ -21,8 +21,8 @@ const App = () => {
           reverseOrder={false}
           toastOptions={{
             style: {
-              background: '#333',
-              color: '#fff',
+              background: "#333",
+              color: "#fff",
             },
           }}
         />
@@ -32,10 +32,10 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/how-it-works" element={<Works />} />
             <Route path="/about" element={<About />} />
-            <Route path="/regist" element={<Regist/>}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/result" element={<Result/>}/>
-            <Route path="/dashboard" element={<Dashboard/>} />
+            <Route path="/regist" element={<Regist />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/result" element={<Result />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </PageTransition>
         <Footer />
