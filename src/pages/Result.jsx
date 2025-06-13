@@ -19,7 +19,7 @@ const Result = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-8">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-18">
       <div className="bg-white rounded-3xl shadow-xl p-10 max-w-3xl w-full">
         <ResultHeader title={displayInfo.title} />
 
@@ -30,6 +30,7 @@ const Result = () => {
           apiResult={apiResult}
           success={success}
         />
+        <p className="text-[14px] py-2 mb-2"><i><li>Ini hanya prediksi dari CekViral. Tetap bijak dan cek ulang, ya!</li></i></p>
 
         <ActionButtons
           onGoToHome={goToHome}
@@ -38,7 +39,7 @@ const Result = () => {
         />
 
         {/* Debug Panel (development only) */}
-        {process.env.NODE_ENV === "development" && apiResult && (
+        {/* {process.env.NODE_ENV === "development" && apiResult && (
           <div className="mt-8 text-left">
             <details className="cursor-pointer">
               <summary className="font-semibold text-sm text-gray-500 hover:text-gray-700">
@@ -49,7 +50,7 @@ const Result = () => {
               </pre>
             </details>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

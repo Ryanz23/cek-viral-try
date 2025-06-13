@@ -40,8 +40,8 @@ export const useAuth = () => {
     };
   }, []);
 
-  const logout = () => {
-    authService.logout();
+  const logout = async () => {
+    await authService.logout();
     setIsAuthenticated(false);
     setUser(null);
 

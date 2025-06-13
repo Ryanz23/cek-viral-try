@@ -24,7 +24,7 @@ const ResultCard = ({ displayInfo, apiResult, success }) => {
   }
 
   return (
-    <div className={`p-8 rounded-xl border-2 ${bgColor} mb-6`}>
+    <div className={`p-8 rounded-xl border-2 ${bgColor} mb-2`}>
       {/* Main Result */}
       <div className="mb-6">
         <div className={`text-3xl font-bold ${color} mb-2`}>{finalLabel}</div>

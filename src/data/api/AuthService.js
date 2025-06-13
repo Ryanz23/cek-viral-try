@@ -1,5 +1,5 @@
 // src/services/authService.js
-const API_BASE_URL = "https://auth-service-2-231745028467.asia-southeast2.run.app";
+const API_BASE_URL = "https://auth-service-231745028467.asia-southeast2.run.app";
 
 class AuthService {
   constructor() {
