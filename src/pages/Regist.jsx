@@ -14,7 +14,6 @@ const Regist = () => {
   const [success, setSuccess] = useState("");
   const navigate = useNavigate();
 
-  // Check if user is already authenticated
   useEffect(() => {
     if (authService.isAuthenticated()) {
       navigate("/dashboard", { replace: true });
@@ -23,12 +22,11 @@ const Regist = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
-    
-    // Clear messages when user starts typing
+
     if (error) setError("");
     if (success) setSuccess("");
   };
@@ -71,7 +69,7 @@ const Regist = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -83,13 +81,16 @@ const Regist = () => {
     try {
       // Remove confirmPassword from the data sent to API
       const { ...registrationData } = formData;
-      
+      console.log("Registration data:", registrationData);
+
       const result = await authService.register(registrationData);
 
       if (result.success) {
         console.log("Registration successful:", result.data);
-        setSuccess("Registrasi berhasil! Anda akan diarahkan ke halaman login dalam 3 detik.");
-        
+        setSuccess(
+          "Registrasi berhasil! Anda akan diarahkan ke halaman login dalam 3 detik."
+        );
+
         // Reset form
         setFormData({
           username: "",
@@ -100,6 +101,8 @@ const Regist = () => {
 
         // Redirect to login after 3 seconds
         setTimeout(() => {
+          // Trigger auth state change event
+          window.dispatchEvent(new Event("authStateChanged"));
           navigate("/login", { replace: true });
         }, 3000);
       } else {
@@ -246,23 +249,23 @@ const Regist = () => {
           >
             {loading ? (
               <>
-                <svg 
-                  className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  fill="none" 
+                <svg
+                  className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
                   viewBox="0 0 24 24"
                 >
-                  <circle 
-                    className="opacity-25" 
-                    cx="12" 
-                    cy="12" 
-                    r="10" 
-                    stroke="currentColor" 
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
                     strokeWidth="4"
                   />
-                  <path 
-                    className="opacity-75" 
-                    fill="currentColor" 
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
                     d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                   />
                 </svg>
@@ -276,8 +279,8 @@ const Regist = () => {
 
         <p className="mt-6 text-sm text-center text-gray-600">
           Sudah punya akun?{" "}
-          <Link 
-            to="/login" 
+          <Link
+            to="/login"
             className="text-blue-500 hover:text-blue-600 hover:underline font-medium"
           >
             Masuk di sini
